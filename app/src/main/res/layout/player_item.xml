@@ -13,7 +13,8 @@
         android:layout_marginTop="6dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_launcher_background" />
+        tools:src="@drawable/ic_launcher_background"
+        android:importantForAccessibility="no" />
 
     <TextView
         android:id="@+id/player_name_text"
@@ -38,7 +39,8 @@
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toStartOf="@id/player_club_text"
         app:layout_constraintStart_toEndOf="@id/photo_player_image"
-        app:layout_constraintTop_toBottomOf="@id/player_name_text" />
+        app:layout_constraintTop_toBottomOf="@id/player_name_text"
+        android:importantForAccessibility="no" />
 
     <TextView
         android:id="@+id/player_club_text"
@@ -63,6 +65,7 @@
         android:src="@drawable/ic_more"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

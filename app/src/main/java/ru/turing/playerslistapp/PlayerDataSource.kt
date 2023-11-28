@@ -1,9 +1,7 @@
 package ru.turing.playerslistapp
 
-import android.app.Application
 
 typealias PlayerListener = (players: List<Player>) -> Unit
-
 class PlayerDataSource() {
 
     private val playerList = Array(1) {
@@ -28,6 +26,7 @@ class PlayerDataSource() {
 
     fun addPlayer(player: Player) {
         playerList.add(player)
+        notifyChanges()
     }
 
     fun addListener(listener: PlayerListener) {
@@ -38,9 +37,4 @@ class PlayerDataSource() {
     private fun notifyChanges() {
         listeners.forEach { it.invoke(playerList) }
     }
-}
-
-class App : Application() {
-    val playerDataSource = PlayerDataSource()
-
 }
