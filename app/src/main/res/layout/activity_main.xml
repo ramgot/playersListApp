@@ -7,17 +7,17 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id = "@+id/players_list_recycler"
+        android:id="@+id/players_list_recycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
     <Button
         android:id="@+id/add_player_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="@string/button_get_text"/>
+        android:text="@string/button_get_text" />
 
     <Button
         android:id="@+id/add_random_button"

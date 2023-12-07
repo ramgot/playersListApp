@@ -2,7 +2,6 @@ package ru.turing.playerslistapp
 
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.launch

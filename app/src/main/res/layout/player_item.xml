@@ -11,10 +11,10 @@
         android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="6dp"
+        android:importantForAccessibility="no"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_launcher_background"
-        android:importantForAccessibility="no" />
+        tools:src="@drawable/ic_launcher_background" />
 
     <TextView
         android:id="@+id/player_name_text"
@@ -35,12 +35,12 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="6dp"
+        android:importantForAccessibility="no"
         android:padding="6dp"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toStartOf="@id/player_club_text"
         app:layout_constraintStart_toEndOf="@id/photo_player_image"
-        app:layout_constraintTop_toBottomOf="@id/player_name_text"
-        android:importantForAccessibility="no" />
+        app:layout_constraintTop_toBottomOf="@id/player_name_text" />
 
     <TextView
         android:id="@+id/player_club_text"
@@ -61,11 +61,11 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
+        android:importantForAccessibility="no"
         android:padding="6dp"
         android:src="@drawable/ic_more"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAccessibility="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
