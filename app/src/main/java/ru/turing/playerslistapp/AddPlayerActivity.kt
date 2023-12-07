@@ -15,7 +15,7 @@ class AddPlayerActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.addButton.setOnClickListener {
-            val i = Intent(this@AddPlayerActivity, MainActivity::class.java)
+            val toMainActivityIntent = Intent(this@AddPlayerActivity, MainActivity::class.java)
             val player = Player(
                 id = hashCode().toLong(),
                 name = binding.getNameText.text.toString(),
@@ -23,8 +23,8 @@ class AddPlayerActivity : AppCompatActivity() {
                 photoUrl = binding.getPhotourlText.text.toString(),
                 clubUrl = binding.getCluburlText.text.toString()
             )
-            i.putExtra(SecondActivityContract.RESULT_KEY, player)
-            setResult(Activity.RESULT_OK, i)
+            toMainActivityIntent.putExtra(SecondActivityContract.RESULT_KEY, player)
+            setResult(Activity.RESULT_OK, toMainActivityIntent)
             finish()
         }
     }

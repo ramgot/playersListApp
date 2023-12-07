@@ -11,14 +11,15 @@ class SecondActivityContract : ActivityResultContract<Unit, Player?>() {
     }
 
     override fun parseResult(resultCode: Int, intent: Intent?): Player? {
-        if (resultCode != Activity.RESULT_OK) return null
-        return intent?.getParcelableExtra<Player>(RESULT_KEY) ?: Player(
+        //if (resultCode != Activity.RESULT_OK) return null
+        return intent?.getParcelableExtra<Player>(RESULT_KEY)
+    /* return intent?.getParcelableExtra<Player>(RESULT_KEY) ?: Player(
             hashCode().toLong(),
             "",
             "",
             "",
             ""
-        )
+        )*/
     }
 
     companion object {
