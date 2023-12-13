@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">playersListApp</string>
+    <string name="button_get_text">Добавить игрока</string>
+    <string name="text_add_player">Добавление игрока</string>
+    <string name="hint_name">Введите имя и фамилию игрока</string>
+    <string name="hint_club_name">Введите название клуба </string>
+    <string name="hint_player_photo_reference">Введите ссылку на фото игрока</string>
+    <string name="hint_club_photo">Введите ссылку на эмблему клуба</string>
+    <string name="add_button">Добавить!</string>
+    <string name="add_random_button_text">Добавить случайно!</string>
 </resources>
