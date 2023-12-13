@@ -16,12 +16,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var playerDataSource: PlayerDataSource
     private lateinit var adapter: PlayersAdapter
     private val activityLauncher: ActivityResultLauncher<Unit> =
-        registerForActivityResult(SecondActivityContract()) {
+        registerForActivityResult(AddPlayerContract()) {
             if (it != null) {
                 playerDataSource.addPlayer(it)
-            } /*else {
-                playerDataSource.addPlayer(Player(hashCode().toLong(), "", "", "", ""))
-            }*/
+            }
         }
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ru.turing.playerslistapp.databinding.ActivityAddPlayerBinding
+import java.util.UUID
 
 class AddPlayerActivity : AppCompatActivity() {
 
@@ -17,13 +18,13 @@ class AddPlayerActivity : AppCompatActivity() {
         binding.addButton.setOnClickListener {
             val toMainActivityIntent = Intent(this@AddPlayerActivity, MainActivity::class.java)
             val player = Player(
-                id = hashCode().toLong(),
+                id = UUID.randomUUID(),
                 name = binding.getNameText.text.toString(),
                 club = binding.getClubNameText.text.toString(),
                 photoUrl = binding.getPhotourlText.text.toString(),
                 clubUrl = binding.getCluburlText.text.toString()
             )
-            toMainActivityIntent.putExtra(SecondActivityContract.RESULT_KEY, player)
+            toMainActivityIntent.putExtra(AddPlayerContract.RESULT_KEY, player)
             setResult(Activity.RESULT_OK, toMainActivityIntent)
             finish()
         }

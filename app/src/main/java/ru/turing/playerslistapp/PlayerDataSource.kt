@@ -1,5 +1,6 @@
 package ru.turing.playerslistapp
 
+import java.util.UUID
 
 typealias PlayerListener = (players: List<Player>) -> Unit
 
@@ -29,7 +30,7 @@ class PlayerDataSource() {
 
     private val playerList = Array(1) {
         Player(
-            id = 1L,
+            id = UUID.randomUUID(),
             name = "Лионель Месси",
             club = "Интер Майами",
             photoUrl = "https://img.a.transfermarkt.technology/portrait/header/28003-1694590254.jpg?lm=1",
@@ -61,13 +62,12 @@ class PlayerDataSource() {
     }
 
     fun formRandomPlayer(): Player {
-        val player = Player(
-            id = hashCode().toLong(),
+        return Player(
+            id = UUID.randomUUID(),
             name = namesList[(0..4).random()],
             club = clubsList[(0..3).random()],
             photoUrl = facesList[(0..4).random()],
             clubUrl = emblemsList[(0..3).random()],
         )
-        return player
     }
 }
